@@ -60,7 +60,7 @@ export default function App() {
       <div className="text-center ">
         <h1 className='text-5xl text-yellow-300 font-medium '>รางวัลล็อตเตอรี่ Diversition</h1>
         <div className="badge badge-ghost text-xl p-4 font-light mt-3">ผลการออกรางวัล Diversition</div>
-        <h2 className="text-4xl text-white font-light mt-3">เลขที่ออก : </h2>
+        <h2 className="text-4xl text-white font-light mt-3">เลขที่ออก : <span className='text-green-200 font-semibold'>{prizes.firstPrize !== null ? prizes.firstPrize : ''}</span> </h2>
       </div>
 
       <div className="flex justify-center gap-8 px-10 mt-20 ">
