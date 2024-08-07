@@ -1,4 +1,4 @@
-// Ui no logic
+// Ui no logic.
 
 export default function App() {
   return (
