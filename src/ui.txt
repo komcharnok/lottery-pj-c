@@ -1,0 +1,112 @@
+// Ui no logic
+
+export default function App() {
+  return (
+    <div className="container mx-auto py-20 h-auto ">
+
+      {/* แทบ text  */}
+      <div className="text-center ">
+        <h1 className='text-5xl  font text-white font-medium  '>รางวัลล็อตเตอรี่ Diversition</h1>
+        <div className="badge badge-ghost text-xl p-4 font-light mt-3">ผลการออกรางวัล Diversition</div>
+        <h2 className="text-4xl  text-white font-light mt-3 ">เลขที่ออก : </h2>
+      </div>
+
+      <div className="flex justify-center gap-8 px-10 mt-20 ">
+        <div className="w-[1400px] ">
+
+          {/* แทบ text และ button */}
+          <div className=" flex justify-between items-end">
+            <div className="flex gap-2">
+              <button className="btn bg-white/70  border-none text-black shadow px-10 text-xl font-light">กดสุ่ม</button>
+            </div>
+
+            <div className="card-actions justify-end">
+              <button className="btn bg-white/60 border-none text-black shadow px-10 text-xl font-light">เริ่มใหม่</button>
+
+              <button
+                className="btn bg-white/60  border-none text-black shadow px-10 text-xl font-light"
+                onClick={() => document.getElementById('my_modal_1').showModal()}
+              >ตรวจเลข
+              </button>
+
+              {/* dialog ของตรวจเลข */}
+              <dialog id="my_modal_1" className="modal">
+                <div className="modal-box">
+
+                  <div className="p-8">
+                    <h3 className="font-bold text-lg">ตรวจรางวัลล็อตเตอรี่ Diversition!</h3>
+                    <label className="input input-bordered flex items-center gap-2 mt-4">
+                      <input type="text" className="grow" placeholder="Search" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                        fill="currentColor"
+                        className="h-4 w-4 opacity-70 ">
+                        <path
+                          fillRule="evenodd"
+                          d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                          clipRule="evenodd" />
+                      </svg>
+                    </label>
+                    <div className="mt-3 bg-yellow-400 h-12 flex items-center">
+                      <p className="px-3">905 ถูกรางวัลที่ 1 </p>
+                    </div>
+                  </div>
+                  <div className="modal-action px-8">
+                    <form method="dialog">
+                      <div className="flex gap-2">
+                        <button className="btn bg-green-500 text-white font-light">ตรวจเลข</button>
+                        <button className="btn bg-red-400 text-white font-light">ปิด</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+              <button className="btn bg-white/70  border-none text-black shadow px-10 text-xl font-light">รอบถัดไป</button>
+            </div>
+          </div>
+
+          {/* รางวัล */}
+          <div className="card bg-base-100 w-full shadow-xl mt-4">
+            <div className="card-body items-center">
+              <div class="grid grid-cols-4 gap-4 w-full h-96 ">
+
+                {/* รางวัลที่1 */}
+                <div class="col-span-2 bg-red-500 text-center flex items-center ">
+                  <p className="text-3xl text-white font-semibold">รางวัลที่ 1</p>
+                </div>
+                <div className="col-span-2 bg-red-500/80 text-center flex items-center justify-center h-full">
+                  <p className="text-4xl font-extrabold text-white">860</p>
+                </div>
+                <div class="col-span-2 bg-red-500 text-center flex items-center ">
+                  <p className="text-3xl text-white font-semibold">รางวัลเลขข้างเคียงรางวัลที่ 1</p>
+                </div>
+                <div class="bg-red-500/70 text-center flex items-center justify-center h-full">
+                  <p className="text-3xl text-white font-semibold">861</p>
+                </div>
+                <div class="bg-red-500/70 text-center flex items-center justify-center h-full">
+                  <p className="text-3xl text-white font-semibold">862</p>
+                </div>
+
+                {/* รางวัลที่2 */}
+                <div class="bg-red-500 text-center flex items-center justify-center h-full">
+                  <p className="text-3xl text-white font-semibold">รางวัลที่ 2</p>
+                </div>
+                <div class="bg-red-500/70 text-center flex items-center justify-center h-full">
+                  <p className="text-3xl text-white font-semibold">862</p>
+                </div>
+                <div class="bg-red-500/70 text-center flex items-center justify-center h-full">
+                  <p className="text-3xl text-white font-semibold">862</p>
+                </div>
+                <div class="bg-red-500/70 text-center flex items-center justify-center h-full">
+                  <p className="text-3xl text-white font-semibold">862</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  )
+}
